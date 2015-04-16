@@ -1,0 +1,34 @@
+/* Empty. Add your own CSS if you like */
+
+.large-stars {
+    font-size: 325%;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+star-input > div {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+
+    padding: 5px 0 15px 0;
+
+    font-size: 300%;
+}
+
+star-input i.icon {
+    margin: 0 5px;
+}
+
+.photo-container {
+    position: relative;
+    margin-top: 15px;
+}
+
+.remove-photo {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}

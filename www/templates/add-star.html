@@ -1,0 +1,35 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button button-clear" ng-click="dismissModal()">
+                <i class="icon ion-ios-close-empty"></i>
+            </button>
+        </div>
+        <h1 class="title">Star Me</h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <star-input rating="newStar.stars"></star-input>
+        <div class="padding-bottom">
+            <button class="button button-block" ng-hide="newStar.imgUrl" ng-click="showPhotoActionSheet()">
+                <i class="icon ion-camera"></i> Add a photo
+            </button>
+            <img ng-src="{{newStar.imgUrl}}" style="max-width: 100%;" ng-show="newStar.imgUrl" />
+        </div>
+        <form>
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" ng-model="newStar.title" placeholder="Title"/>
+                </label>
+            </div>
+            <div class="list">
+                <label class="item item-input">
+                    <textarea type="text" ng-model="newStar.description" placeholder="Give me the deets..."
+                              rows="3"></textarea>
+                </label>
+            </div>
+            <button class="button button-positive button-block" ng-click="save(newStar)">
+                Save
+            </button>
+        </form>
+    </ion-content>
+</ion-modal-view>

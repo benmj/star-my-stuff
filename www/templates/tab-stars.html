@@ -1,0 +1,28 @@
+<ion-view view-title="Stuff">
+    <ion-nav-buttons side="secondary">
+        <button class="button" ng-click="vm.showModal()">
+            <i class="icon ion-ios-star"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item class="item" ng-repeat="(key, star) in vm.stars.items" type="item-text-wrap"
+                      ng-class="{'item-thumbnail-left' : star.imgUrl.length }"
+                      ui-sref="tab.star-detail({ starId: key })">
+                <img ng-src="{{star.imgUrl}}" ng-if="star.imgUrl">
+
+                <h2>{{star.title}}</h2>
+
+                <p>{{star.description}}</p>
+
+                <stars rating="star.stars"></stars>
+
+                <i ng-if="false" class="icon ion-chevron-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="vm.remove(key)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

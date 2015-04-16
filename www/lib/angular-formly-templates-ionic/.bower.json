@@ -1,0 +1,49 @@
+{
+  "name": "angular-formly-templates-ionic",
+  "version": "0.2.2",
+  "authors": [
+    "Astrism <astrisms@gmail.com>"
+  ],
+  "contributors": [
+    "Astrism <astrisms@gmail.com>",
+    "Kent C. Dodds <kent@doddsfamily.us>",
+    "Mike Hartington <mikehartington@gmail.com>"
+  ],
+  "main": "dist/angular-formly-templates-ionic.js",
+  "description": "Angular-Formly plugin for Ionic Framework.",
+  "keywords": [
+    "AngularJs",
+    "form",
+    "formly",
+    "json",
+    "ionic",
+    "html"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.x",
+    "angular-formly": ">=3.0.0"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.21.4"
+  },
+  "homepage": "https://github.com/formly-js/angular-formly-templates-ionic",
+  "_release": "0.2.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.2",
+    "commit": "45b1dd43e4cd0b3f6c75807537e7ef4a0f92b2d2"
+  },
+  "_source": "git://github.com/formly-js/angular-formly-templates-ionic.git",
+  "_target": "~0.2.2",
+  "_originalSource": "angular-formly-templates-ionic",
+  "_direct": true
+}

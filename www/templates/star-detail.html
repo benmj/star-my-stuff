@@ -1,0 +1,55 @@
+<ion-view view-title="Star">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-clear" ng-click="vm.toggleEdit(!vm.editMode)"
+                ng-bind="vm.editMode ? 'Done' : 'Edit'">
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <!-- READ MODE -->
+        <div ng-hide="vm.editMode">
+            <h1 ng-bind="vm.star.title"></h1>
+            <img ng-src="{{vm.star.imgUrl}}" ng-if="vm.star.imgUrl" style="max-width: 100%;">
+
+            <p>
+                {{vm.star.description}}
+            </p>
+            <stars rating="vm.star.stars" class="large-stars centered-text"></stars>
+            <p ng-bind="vm.star.dateCreated|date"></p>
+        </div>
+
+        <!-- EDIT MODE -->
+        <div ng-show="vm.editMode">
+            <star-input rating="vm.star.stars"></star-input>
+            <div class="padding-bottom">
+                <button class="button button-block" ng-hide="vm.star.imgUrl" ng-click="vm.showPhotoActionSheet()">
+                    <i class="icon ion-camera"></i> Add a photo
+                </button>
+
+                <div style="width: 25%">
+                    <img ng-src="{{vm.star.imgUrl}}" style="max-width: 100%;" ng-show="vm.star.imgUrl" ng-click="vm.showDeletePhotoActionSheet()" />
+                </div>
+            </div>
+            <form>
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" ng-model="vm.star.title" placeholder="Title"/>
+                    </label>
+                </div>
+                <div class="list">
+                    <label class="item item-input">
+                    <textarea type="text" ng-model="vm.star.description" placeholder="Give me the deets..."
+                              rows="3"></textarea>
+                    </label>
+                </div>
+
+                <button class="button button-positive button-block" ng-click="vm.save()">
+                    Save
+                </button>
+
+                <button class="button button-assertive button-block" ng-click="vm.showDeleteActionSheet()">
+                    Delete
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

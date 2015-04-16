@@ -1,0 +1,10 @@
+<div class="star-container centered-text">
+    <i class="icon"
+       ng-class="{
+            calm: option <= rating,
+            'ion-ios-star-outline': option > rating,
+            'ion-ios-star': option <= rating }"
+       ng-repeat="option in options"
+       ng-click="rate(option)">
+    </i>
+</div>
