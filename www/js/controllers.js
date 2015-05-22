@@ -31,12 +31,12 @@ angular.module('starter.controllers', [])
       vm.modal.show();
     };
 
-    // DATA ON THE MODAL'S SCOPE
     $scope.dismissModal = function () {
       vm.modal.hide();
     };
 
     $scope.save = function (newStar) {
+      // you can't seem to use "controller as" syntax with the ionic modals
       DataService.post(
         angular.extend(newStar, {dateCreated: new Date()})
       ).then(function () {
